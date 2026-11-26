@@ -1,4 +1,6 @@
+import { apiFetch } from "./config";
+
 export const getPerfil = () =>
-  fetch("/api/users/perfil", {
+  apiFetch("/users/perfil", {
     headers: { Accept: "application/json" },
   }).then((response) => response.json());

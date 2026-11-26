@@ -1,8 +1,9 @@
+import { apiFetch } from "./config";
+
 export const login = (data) =>
-  fetch("/api/auth/login", {
+  apiFetch("/auth/login", {
     headers: { "Content-Type": "application/json" },
     method: "POST",
-    credentials: "include",
     body: JSON.stringify(data),
   }).then(async (response) => {
     const result = await response.json();

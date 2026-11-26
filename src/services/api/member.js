@@ -1,5 +1,7 @@
+import { apiFetch } from "./config";
+
 export const getMember = (userId) =>
-  fetch(`/api/users/member/${userId}`, {
+  apiFetch(`/users/member/${userId}`, {
     headers: { Accept: "application/json" },
   }).then(async (response) => {
     const result = await response.json();
@@ -12,7 +14,7 @@ export const getMember = (userId) =>
   });
 
 export const createMember = (userId, data) =>
-  fetch(`/api/users/${userId}/member`, {
+  apiFetch(`/users/${userId}/member`, {
     headers: { "Content-Type": "application/json" },
     method: "POST",
     body: JSON.stringify(data),
