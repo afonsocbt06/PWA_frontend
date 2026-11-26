@@ -1,0 +1,105 @@
+.header {
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: azure;
+    border-bottom: 1px solid black;
+    margin-bottom: 10px;
+    padding: 14px 24px;
+
+    .img {
+        width: 108px;
+        height: 108px;
+        object-fit: contain;
+    }
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    h1 {
+        margin: 0;
+        font-size: 2.5rem;
+        font-weight: 400;
+    }
+}
+
+.counts {
+    color: orangered;
+    font-size: 1.2rem;
+}
+
+.navBar {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    padding: 0;
+    margin-left: auto;
+}
+
+.usersCount {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #111;
+    white-space: nowrap;
+}
+
+.link,
+.register {
+    margin: 0;
+    color: #111;
+    font-size: 1.75rem;
+    line-height: 1.2;
+    text-decoration: none;
+}
+
+.link {
+    border: 1px solid #111;
+    padding: 8px 6px;
+}
+
+.register {
+    padding: 8px 0;
+}
+
+@media (max-width: 576px) {
+    .header {
+        min-height: 100px;
+        padding: 10px 14px;
+
+        .img {
+            width: 72px;
+            height: 72px;
+        }
+    }
+
+    .logo {
+        gap: 8px;
+
+        h1 {
+            font-size: 1.75rem;
+        }
+    }
+
+    .navBar {
+        gap: 10px;
+    }
+
+    .usersCount {
+        font-size: 0.95rem;
+    }
+
+    .link,
+    .register {
+        font-size: 1.1rem;
+    }
+
+    .link {
+        padding: 6px 4px;
+    }
+}
