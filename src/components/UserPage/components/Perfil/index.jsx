@@ -46,7 +46,7 @@ function Perfil({ user = {} }) {
         <Col>
           <div className={styles.qrCodeContainer}>
             <h2>Code Login</h2>
-            <Qrcode user={user} />
+            <Qrcode />
           </div>
         </Col>
       </Row>
