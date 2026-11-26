@@ -13,7 +13,11 @@ const ProtectedRoute = ({ children, requiredRole }) => {
     return <div>Loading</div>;
   }
 
-  const hasRequiredRole = !requiredRole || role.includes(requiredRole);
+  const hasRequiredRole =
+    !requiredRole ||
+    (requiredRole === "user"
+      ? role.some((value) => value === "member" || value === "notmember")
+      : role.includes(requiredRole));
 
   if (!isValidLogin || !hasRequiredRole) {
     // user is not authenticated
